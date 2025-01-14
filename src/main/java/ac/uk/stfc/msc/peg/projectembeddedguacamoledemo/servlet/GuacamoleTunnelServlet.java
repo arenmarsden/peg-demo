@@ -16,13 +16,14 @@ public class GuacamoleTunnelServlet extends GuacamoleHTTPTunnelServlet {
     @Override
     protected GuacamoleTunnel doConnect(HttpServletRequest httpServletRequest) throws GuacamoleException {
         GuacamoleConfiguration configuration = new GuacamoleConfiguration();
-        configuration.setProtocol("vnc");
-        configuration.setParameter("hostname", "localhost");
+        configuration.setProtocol("rdp");
+        configuration.setParameter("hostname", "ec2-52-214-60-143.eu-west-1.compute.amazonaws.com");
         configuration.setParameter("port", "4821");
-        configuration.setParameter("password", "potato");
+        configuration.setParameter("user", "dev");
+        configuration.setParameter("password", "dev");
 
         GuacamoleSocket socket = new ConfiguredGuacamoleSocket(
-                new InetGuacamoleSocket("localhost", 4822),
+                new InetGuacamoleSocket("ec2-52-214-60-143.eu-west-1.compute.amazonaws.com", 4822),
                 configuration
         );
 

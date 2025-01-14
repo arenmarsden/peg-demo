@@ -55,7 +55,7 @@
             <groupId>org.apache.guacamole</groupId>
             <artifactId>guacamole-common-js</artifactId>
             <version>1.5.5</version>
-            <type>pom</type>
+            <type>zip</type>
         </dependency>
     </dependencies>
 
